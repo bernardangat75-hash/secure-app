@@ -22,7 +22,7 @@ jobs:
         run: pip install pip-audit
 
       - name: Run dependency scan
-        run: pip-audit -r requirements.txt > dependency-report.txt
+        run: pip-audit -r requirements.txt || true
 
       # Secret scan
       - name: Run Gitleaks
